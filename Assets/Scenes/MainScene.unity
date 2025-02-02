@@ -725,7 +725,7 @@ GameObject:
   - component: {fileID: 1067016154}
   - component: {fileID: 1067016153}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -861,6 +861,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 910befed67332de4e940d959a3a36a62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Last_Ground: {fileID: 1067016151}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
