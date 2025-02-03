@@ -8,13 +8,13 @@ public class GroundSpawner : MonoBehaviour
     public GameObject Last_Ground;
     void Start()
     {
-        for(int i = 0; i < 10 ; i++)
+        for(int i = 0; i < 15 ; i++)
         {
             Spawn_Create();  
         }
     }
 
-    void Spawn_Create()
+    public void Spawn_Create()
     {
         Vector3 Aspect;
 

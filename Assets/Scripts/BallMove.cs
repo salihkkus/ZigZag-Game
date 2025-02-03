@@ -5,6 +5,7 @@ using UnityEngine;
 public class BallMove : MonoBehaviour
 {
     Vector3 aspect;
+    public GroundSpawner groundspawnerscript;
     public float speed;
     void Start()
     {
@@ -32,4 +33,13 @@ public class BallMove : MonoBehaviour
         Vector3 Move = aspect * Time.deltaTime * speed;
         transform.position += Move;
     }
+
+private void OnCollisionExit(Collision collision)
+{
+    if(collision.gameObject.tag == "Ground")
+    {
+    groundspawnerscript.Spawn_Create();
+    }
+}
+
 }
