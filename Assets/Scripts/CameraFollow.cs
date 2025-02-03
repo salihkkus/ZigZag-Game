@@ -15,6 +15,9 @@ public class CameraFollow : MonoBehaviour
    
     void Update()
     {
-        transform.position = diff + ballplace.position;
+        if(BallMove.fall == false)
+        {
+            transform.position = diff + ballplace.position;
+        }
     }
 }
