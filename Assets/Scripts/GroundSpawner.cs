@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class GroundSpawner : MonoBehaviour
 {
-
     public GameObject Last_Ground;
+    private Vector3 lastPosition;
+    
     void Start()
     {
-        for(int i = 0; i < 15 ; i++)
+        lastPosition = Last_Ground.transform.position;
+
+        for (int i = 0; i < 15; i++)
         {
-            Spawn_Create();  
+            Spawn_Create();
         }
     }
 
@@ -18,15 +21,17 @@ public class GroundSpawner : MonoBehaviour
     {
         Vector3 Aspect;
 
-    if(Random.Range(0,2) == 0)
-    {
-        Aspect = Vector3.left;
-    }
-    else
-    {
-        Aspect = Vector3.forward;
-    }
+        if (Random.Range(0, 2) == 0)
+        {
+            Aspect = new Vector3(-1, 0, 0); // Sol tarafa ekleme
+        }
+        else
+        {
+            Aspect = new Vector3(0, 0, 1); // İleriye ekleme
+        }
 
-        Last_Ground = Instantiate(Last_Ground, Last_Ground.transform.position + Aspect, transform.rotation);
+        lastPosition += Aspect; // Son pozisyonu güncelle
+
+        Last_Ground = Instantiate(Last_Ground, lastPosition, Quaternion.identity);
     }
 }
