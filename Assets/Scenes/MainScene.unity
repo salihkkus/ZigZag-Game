@@ -210,8 +210,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.2827958, y: 0.30708194, z: -0.09610726, w: -0.9035988}
-  m_LocalPosition: {x: 2.9553964, y: 3.3803952, z: -3.787232}
+  m_LocalRotation: {x: -0.31309843, y: 0.32988772, z: -0.11701131, w: -0.88286567}
+  m_LocalPosition: {x: 2.7579644, y: 3.2457387, z: -2.888292}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -593,7 +593,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186405a56918fc44fa9576586c97f122, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  groundspawnerscript: {fileID: 1486975645}
   speed: 3
+  addedspeed: 0.1
 --- !u!54 &966787327
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -740,7 +742,7 @@ GameObject:
   - component: {fileID: 1067016153}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

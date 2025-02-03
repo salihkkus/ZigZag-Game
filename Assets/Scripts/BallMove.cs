@@ -8,6 +8,7 @@ public class BallMove : MonoBehaviour
     public GroundSpawner groundspawnerscript;
     public static bool fall;
     public float speed;
+    public float addedspeed;
     void Start()
     {
         aspect = Vector3.forward;
@@ -37,6 +38,7 @@ public class BallMove : MonoBehaviour
             {
                 aspect = Vector3.forward;
             }
+            speed += addedspeed * Time.deltaTime;
         }
     }
 
@@ -50,6 +52,7 @@ private void OnCollisionExit(Collision collision)
 {
     if(collision.gameObject.tag == "Ground")
     {
+    collision.gameObject.AddComponent<Rigidbody>();
     groundspawnerscript.Spawn_Create();
     StartCoroutine(DeleteGround(collision.gameObject));
     }
