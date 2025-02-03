@@ -39,7 +39,14 @@ private void OnCollisionExit(Collision collision)
     if(collision.gameObject.tag == "Ground")
     {
     groundspawnerscript.Spawn_Create();
+    StartCoroutine(DeleteGround(collision.gameObject));
     }
+}
+
+IEnumerator DeleteGround(GameObject DeleteObject)
+{
+    yield return new WaitForSeconds(3f);
+    Destroy(DeleteObject);
 }
 
 }
