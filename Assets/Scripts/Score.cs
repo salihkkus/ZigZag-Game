@@ -1,18 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Scor : MonoBehaviour
+public class Score : MonoBehaviour
 {
-    public static int score;
+    public static int scores;
+    public Text scoretext;
     void Start()
     {
-        score = 0;
+        scores = 0;
     }
 
     
     void Update()
     {
-        
+        scoretext.text = scores.ToString();
     }
 }

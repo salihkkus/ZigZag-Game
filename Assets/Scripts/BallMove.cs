@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class BallMove : MonoBehaviour
 {
@@ -52,6 +53,7 @@ private void OnCollisionExit(Collision collision)
 {
     if(collision.gameObject.tag == "Ground")
     {
+        Score.scores++;
     collision.gameObject.AddComponent<Rigidbody>();
     groundspawnerscript.Spawn_Create();
     StartCoroutine(DeleteGround(collision.gameObject));
