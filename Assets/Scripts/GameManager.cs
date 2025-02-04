@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator FadeOutCompanyName()
     {
-        float duration = 1f; // 1 saniyede kaybolsun
+        float duration = 5f; // 1 saniyede kaybolsun
         float elapsedTime = 0f;
 
 
