@@ -71,6 +71,6 @@ public class BallMove : MonoBehaviour
     IEnumerator RestartGame()
     {
         yield return new WaitForSeconds(1f); // 1 saniye beklet
-        SceneManager.LoadScene("MainScene"); // Başlangıç sahnesine dön
+        SceneManager.LoadScene("MainScene"); // Return to the start scene
     }
 }
